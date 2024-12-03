@@ -1,5 +1,6 @@
 import './App.css'
-import "./components/consultant.jsx"
+import "./components/ConsultantPerson.jsx"
+import ConsultantList from './components/ConsultantList.jsx';
 
 
 const consult_data = [
@@ -46,20 +47,10 @@ const consult_data = [
 
 
 function App() {
-  const consultant = consult_data[0]; // Access the first object in the array
+ 
 
   return (
-    <div>
-      <p>{consultant.educationLevel}</p>
-      <p>Degree Program: {consultant.degreeProgram}</p>
-      <p>Graduation Year: {consultant.graduationYear}</p>
-      <p>Certifications: {consultant.certifications}</p>
-      <p>Courses: {consultant.courses}</p>
-      <p>Project Experience: {consultant.projectExperience}</p>
-      <p>Technology Experience: {consultant.technologyExperience}</p>
-      <p>Work Experience Duration: {consultant.workExperience.duration}</p>
-      <p>Work Experience Start Year: {consultant.workExperience.startYear}</p>
-    </div>
+    <ConsultantList data={consult_data}/>
   );
 }
 
