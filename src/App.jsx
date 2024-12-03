@@ -43,6 +43,32 @@ const consult_data = [
           startYear: 2021,
       },
   },
+  {
+    educationLevel: "Alempi korkeakouluaste",
+    degreeProgram: "Tietotekniikan insinööri",
+    graduationYear: "2022",
+    certifications: "AWS Cloud Practitioner",
+    courses: "Full-Stack Development",
+    projectExperience: "Mobile app development",
+    technologyExperience: "JavaScript, Kotlin, SQL",
+    workExperience: {
+        duration: "1.5 years",
+        startYear: 2021,
+    },
+},
+{
+  educationLevel: "Alempi korkeakouluaste",
+  degreeProgram: "Tietotekniikan insinööri",
+  graduationYear: "2022",
+  certifications: "AWS Cloud Practitioner",
+  courses: "Full-Stack Development",
+  projectExperience: "Mobile app development",
+  technologyExperience: "JavaScript, Kotlin, SQL",
+  workExperience: {
+      duration: "1.5 years",
+      startYear: 2021,
+  },
+},
 ];
 
 

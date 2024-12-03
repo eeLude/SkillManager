@@ -1,0 +1,8 @@
+.list {
+  display: flex;
+  flex-direction: column; /* This makes the cards stack vertically */
+  align-items: center; /* Centers the cards horizontally */
+  gap: 1.5rem; /* Spacing between cards */
+  margin: 2rem auto;
+  padding: 0 1rem;
+}

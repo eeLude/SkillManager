@@ -1,0 +1,22 @@
+.consultantCard {
+  background-color: #444; /* Dark background for card content */
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consultantCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.consultantCard h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.consultantCard p {
+  margin-bottom: 0.8rem;
+}

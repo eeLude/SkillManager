@@ -1,8 +1,10 @@
-import styles from "./Consultant.module.css";
+import Card from "./UI/card";
+import styles from "./ConsultantPerson.module.css";
 
 const ConsultantPerson = (props) => {
     return (
-      <div className="consultant-card">
+      <Card className={styles.card}>
+     
       <h2>{props.data.degreeProgram}</h2>
       <p>Education Level: {props.data.educationLevel}</p>
       <p>Graduation Year: {props.data.graduationYear}</p>
@@ -11,7 +13,8 @@ const ConsultantPerson = (props) => {
       <p>Project Experience: {props.data.projectExperience}</p>
       <p>Technology Experience: {props.data.technologyExperience}</p>
       <p>Work Experience: {props.data.workExperience.duration} (Started in {props.data.workExperience.startYear})</p>
-    </div>
+    
+    </Card>
     );
   };
   
