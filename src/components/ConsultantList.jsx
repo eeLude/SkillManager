@@ -2,13 +2,13 @@ import ConsultantPerson from "./ConsultantPerson"
 import styles from "./ConsultantList.module.css"
 
 
-const ConsultantList = (props) => {
+const ConsultantList = ({consult_data}) => {
     return (
         <div className={styles.list} >
-        {props.data.map((consultant, index) => (
+        {consult_data.map((consultant, index) => (
             <ConsultantPerson 
             key={index} 
-            data={consultant} 
+            consult_data={consultant} 
             />
         ))}
         </div>
