@@ -13,12 +13,6 @@ const Login = ({ onLogin }) => {
     setPassword(event.target.value);
   };
 
-  
-  const logoutHandler = (event) => {
-    setUsername("");
-    setPassword("");
-  }
-
   const processLogin = () => {
     const users = JSON.parse(import.meta.env.VITE_USERS);
 
@@ -37,7 +31,7 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className={styles.Login}>
-      <h2>Login</h2>
+      <button onClick={processLogin}>Login</button>
 
       <input
         type="text"

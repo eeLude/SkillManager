@@ -6,19 +6,37 @@ import consultants from "./consultants.json";
 
 
 
+
   
 
 
   const App = () => {
+
+   
+    const data = JSON.parse(localStorage.getItem('consultants')) || consultants;
+
     const [loggedInUser, setLoggedInUser] = useState(null);
+    const [consultantData, setConsultantData] = useState(data);
   
     const handleLogin = (user) => {
       setLoggedInUser(user);
-      console.log("Logged in as:", user);
+      
     };
 
     const handleLogout = () => {
       setLoggedInUser(null);
+    };
+
+    
+    
+    
+    const handleEdit = (editedConsultant) => {
+      console.log('Updating consultant:', editedConsultant);
+      const updatedConsultants = consultantData.map((consultant) =>
+        consultant.username === editedConsultant.username ? editedConsultant : consultant
+      );
+      setConsultantData(updatedConsultants);
+      localStorage.setItem('consultants', JSON.stringify(updatedConsultants)); // Save to localStorage
     };
 
     return (
@@ -35,7 +53,11 @@ import consultants from "./consultants.json";
           
         </div>
   
-        <ConsultantList consult_data={consultants} />
+        <ConsultantList 
+        consult_data={consultantData}
+        loggedInUser={loggedInUser}
+        onEdit={handleEdit} 
+        />
       </>
     );
   };
