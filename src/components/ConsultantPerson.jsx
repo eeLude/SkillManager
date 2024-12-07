@@ -2,6 +2,7 @@ import Card from "./UI/card";
 import styles from "./ConsultantPerson.module.css";
 
 const ConsultantPerson = ({consult_data}) => {
+  
     return (
       <Card className={styles.card}>
       <img src={consult_data.image} className={styles.image}></img>
@@ -13,7 +14,6 @@ const ConsultantPerson = ({consult_data}) => {
       <p>Project Experience: {consult_data.projectExperience}</p>
       <p>Technology Experience: {consult_data.technologyExperience}</p>
       <p>Work Experience: {consult_data.workExperience.duration} (Started in {consult_data.workExperience.startYear})</p>
-    
     </Card>
     );
   };
