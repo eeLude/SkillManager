@@ -1,99 +1,122 @@
 [
-    {
-      "username": "Matti Meikäläinen",
-      "role": "consultant",
-      "educationLevel": "Alempi korkeakouluaste",
-      "degreeProgram": "Tradenomi, Tietojenkäsittely",
-      "graduationYear": "2024",
-      "certifications": "Cisco Ethical Hacking",
-      "courses": "React fundamentals",
-      "projectExperience": "Web development",
-      "technologyExperience": "Javascript, Python, C#",
-      "workExperience": {
-        "duration": "2 years",
-        "startYear": 2022
-      },
-      "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  {
+    "username": "Matti Meikäläinen",
+    "educationLevel": "Bachelor's Degree",
+    "degreeProgram": "Bachelor of Information Technology",
+    "graduationYear": "2024",
+    "certifications": "Cisco Certified Network Associate (CCNA)",
+    "courses": "React Fundamentals, Advanced JavaScript, RESTful APIs",
+    "projectExperience": "Web development for a startup’s landing page",
+    "technologyExperience": "JavaScript, Python, C#, HTML, CSS",
+    "workExperience": {
+      "duration": "2 years",
+      "startYear": 2022
     },
-    {
-      "username": "Liisa Virtanen",
-      "role": "consultant",
-      "educationLevel": "Ylempi korkeakouluaste",
-      "degreeProgram": "KTM, Liiketalous",
-      "graduationYear": "2023",
-      "certifications": "Google Analytics",
-      "courses": "Advanced React",
-      "projectExperience": "E-commerce platform development",
-      "technologyExperience": "HTML, CSS, React",
-      "workExperience": {
-        "duration": "3 years",
-        "startYear": 2020
-      },
-      "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Liisa Virtanen",
+    "educationLevel": "Master's Degree",
+    "degreeProgram": "Master of Business Administration",
+    "graduationYear": "2023",
+    "certifications": "Google Analytics, Scrum Master Certified",
+    "courses": "Advanced React, Agile Project Management, Data Visualization",
+    "projectExperience": "E-commerce platform development",
+    "technologyExperience": "HTML, CSS, React, Node.js",
+    "workExperience": {
+      "duration": "3 years",
+      "startYear": 2020
     },
-    {
-      "username": "Jari Korhonen",
-      "role": "consultant",
-      "educationLevel": "Alempi korkeakouluaste",
-      "degreeProgram": "Tietotekniikan insinööri",
-      "graduationYear": "2022",
-      "certifications": "AWS Cloud Practitioner",
-      "courses": "Full-Stack Development",
-      "projectExperience": "Mobile app development",
-      "technologyExperience": "JavaScript, Kotlin, SQL",
-      "workExperience": {
-        "duration": "1.5 years",
-        "startYear": 2021
-      },
-      "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Jari Korhonen",
+    "educationLevel": "Bachelor's Degree",
+    "degreeProgram": "Bachelor of Computer Science",
+    "graduationYear": "2022",
+    "certifications": "AWS Cloud Practitioner, Linux Essentials",
+    "courses": "Full-Stack Development, Docker Fundamentals, Cloud Computing Basics",
+    "projectExperience": "Mobile app development for a fitness startup",
+    "technologyExperience": "JavaScript, Kotlin, SQL, Docker",
+    "workExperience": {
+      "duration": "1.5 years",
+      "startYear": 2021
     },
-    {
-      "username": "Anna Nieminen",
-      "role": "consultant",
-      "educationLevel": "Alempi korkeakouluaste",
-      "degreeProgram": "Tietotekniikan insinööri",
-      "graduationYear": "2022",
-      "certifications": "AWS Cloud Practitioner",
-      "courses": "Full-Stack Development",
-      "projectExperience": "Mobile app development",
-      "technologyExperience": "JavaScript, Kotlin, SQL",
-      "workExperience": {
-        "duration": "1.5 years",
-        "startYear": 2021
-      },
-      "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Anna Nieminen",
+    "educationLevel": "Bachelor's Degree",
+    "degreeProgram": "Bachelor of Information Technology",
+    "graduationYear": "2022",
+    "certifications": "AWS Cloud Practitioner",
+    "courses": "Full-Stack Development, Microservices Architecture, CI/CD Pipelines",
+    "projectExperience": "Mobile app development focusing on user experience",
+    "technologyExperience": "JavaScript, Kotlin, SQL, React Native",
+    "workExperience": {
+      "duration": "1.5 years",
+      "startYear": 2021
     },
-    {
-      "username": "Petteri Salonen",
-      "role": "consultant",
-      "educationLevel": "Alempi korkeakouluaste",
-      "degreeProgram": "Tietotekniikan insinööri",
-      "graduationYear": "2022",
-      "certifications": "AWS Cloud Practitioner",
-      "courses": "Full-Stack Development",
-      "projectExperience": "Mobile app development",
-      "technologyExperience": "JavaScript, Kotlin, SQL",
-      "workExperience": {
-        "duration": "1.5 years",
-        "startYear": 2021
-      },
-      "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Petteri Salonen",
+    "educationLevel": "Bachelor's Degree",
+    "degreeProgram": "Bachelor of Software Engineering",
+    "graduationYear": "2022",
+    "certifications": "AWS Cloud Practitioner",
+    "courses": "Full-Stack Development, Database Design, RESTful APIs",
+    "projectExperience": "Mobile app development for a local retailer",
+    "technologyExperience": "JavaScript, Kotlin, SQL, Node.js, Express",
+    "workExperience": {
+      "duration": "1.5 years",
+      "startYear": 2021
     },
-    {
-      "username": "Admin Admin",
-      "role": "admin",
-      "educationLevel": "Master's Degree",
-      "degreeProgram": "Computer Science",
-      "graduationYear": "2020",
-      "certifications": "Certified Information Systems Security Professional (CISSP)",
-      "courses": "Advanced System Design",
-      "projectExperience": "Managing IT teams, Cloud Infrastructure Projects",
-      "technologyExperience": "AWS, Azure, DevOps, Kubernetes",
-      "workExperience": {
-        "duration": "5 years",
-        "startYear": 2017
-      },
-      "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
-    }
-  ]
-  
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Heikki Lahtinen",
+    "educationLevel": "Master's Degree",
+    "degreeProgram": "Master of Information Systems",
+    "graduationYear": "2021",
+    "certifications": "ITIL Foundation",
+    "courses": "Data Structures, Algorithm Design, Cloud Security",
+    "projectExperience": "Developed a data visualization tool for financial data",
+    "technologyExperience": "Python, R, AWS, GraphQL",
+    "workExperience": {
+      "duration": "3 years",
+      "startYear": 2019
+    },
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Sari Hautala",
+    "educationLevel": "Master's Degree",
+    "degreeProgram": "Master of Data Science",
+    "graduationYear": "2021",
+    "certifications": "Certified Data Professional (CDP)",
+    "courses": "Machine Learning, Big Data Analytics, Statistical Modeling",
+    "projectExperience": "Built a recommendation engine for an online bookstore",
+    "technologyExperience": "Python, TensorFlow, Spark, SQL",
+    "workExperience": {
+      "duration": "4 years",
+      "startYear": 2018
+    },
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  },
+  {
+    "username": "Teemu Rantanen",
+    "educationLevel": "Bachelor's Degree",
+    "degreeProgram": "Bachelor of Information Technology",
+    "graduationYear": "2023",
+    "certifications": "Microsoft Azure Fundamentals",
+    "courses": "Web Development, Azure Cloud Services, Agile Software Development",
+    "projectExperience": "Developed a responsive website for a local charity",
+    "technologyExperience": "JavaScript, TypeScript, Azure, React",
+    "workExperience": {
+      "duration": "2 years",
+      "startYear": 2022
+    },
+    "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
+  }
+]

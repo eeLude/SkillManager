@@ -28,7 +28,7 @@ const EditConsultant = ({ consultant, onSave, onCancel }) => {
 
       <div className={styles.form}>
         <div className={styles.formGroup}>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Name</label>
           <input
             type="text"
             id="username"
@@ -36,18 +36,6 @@ const EditConsultant = ({ consultant, onSave, onCancel }) => {
             value={editedConsultant.username}
             onChange={handleChange}
             placeholder="Username"
-          />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label htmlFor="role">Role</label>
-          <input
-            type="text"
-            id="role"
-            name="role"
-            value={editedConsultant.role}
-            onChange={handleChange}
-            placeholder="Role"
           />
         </div>
 
