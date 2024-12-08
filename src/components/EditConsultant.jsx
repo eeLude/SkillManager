@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './EditConsultant.module.css';
 
 const EditConsultant = ({ consultant, onSave, onCancel }) => {
-    console.log("EditConsultant called", consultant)
+    console.log("EditConsultant called")
   const [editedConsultant, setEditedConsultant] = useState({ ...consultant });
 
   useEffect(() => {

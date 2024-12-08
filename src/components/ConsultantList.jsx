@@ -2,6 +2,7 @@ import ConsultantPerson from "./ConsultantPerson"
 import styles from "./ConsultantList.module.css"
 import { useState } from "react";
 import EditConsultant from "./EditConsultant";
+import PrintConsultant from "./ConsultantPrint";
 
 
 const ConsultantList = ({consult_data, loggedInUser, onEdit}) => {
@@ -27,7 +28,10 @@ const ConsultantList = ({consult_data, loggedInUser, onEdit}) => {
             <div key={index}>
               <ConsultantPerson consult_data={consultant} />
               {loggedInUser && (
+                <div>
                 <button onClick={() => handleEditClick(consultant)}>Edit {consultant.username}</button>
+                <PrintConsultant consultant={consultant}></PrintConsultant>
+                </div>
 
               )}
             </div>
