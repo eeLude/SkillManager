@@ -1,9 +1,38 @@
 .list {
   display: flex;
-  flex-direction: column; /* This makes the cards stack vertically */
-  align-items: center; /* Centers the cards horizontally */
-  gap: 1.5rem; /* Spacing between cards */
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+.card {
+  position: relative;
+  min-width: 650px;
+  /* Needed for absolute positioning of buttons */
+  /* Card styling comes from Card.module.css as well, but you can add overrides here if needed */
+}
+
+.buttonContainer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.buttonContainer button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 14px;
+}
+
+.buttonContainer button:hover {
+  background: #444;
+}
