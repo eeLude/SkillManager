@@ -12,3 +12,30 @@
   margin: 0 auto;
   padding: 1.5rem;
 }
+
+.headerBar {
+  display: flex;
+  justify-content: space-between; /* Pushes items to opposite ends */
+  align-items: center; /* Vertically center them */
+  width: 100%;
+  padding: 1rem; /* Add some space around */
+}
+
+/* Optional styling */
+.welcomeMessage {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logoutButton button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logoutButton button:hover {
+  background: #e53935;
+}

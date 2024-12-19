@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "username": "Matti Meikäläinen",
     "educationLevel": "Bachelor's Degree",
     "degreeProgram": "Bachelor of Information Technology",
@@ -15,6 +16,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 2,
     "username": "Liisa Virtanen",
     "educationLevel": "Master's Degree",
     "degreeProgram": "Master of Business Administration",
@@ -30,6 +32,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 3,
     "username": "Jari Korhonen",
     "educationLevel": "Bachelor's Degree",
     "degreeProgram": "Bachelor of Computer Science",
@@ -45,6 +48,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 4,
     "username": "Anna Nieminen",
     "educationLevel": "Bachelor's Degree",
     "degreeProgram": "Bachelor of Information Technology",
@@ -60,6 +64,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 5,
     "username": "Petteri Salonen",
     "educationLevel": "Bachelor's Degree",
     "degreeProgram": "Bachelor of Software Engineering",
@@ -75,6 +80,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 6,
     "username": "Heikki Lahtinen",
     "educationLevel": "Master's Degree",
     "degreeProgram": "Master of Information Systems",
@@ -90,6 +96,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 7,
     "username": "Sari Hautala",
     "educationLevel": "Master's Degree",
     "degreeProgram": "Master of Data Science",
@@ -105,6 +112,7 @@
     "image": "https://media.istockphoto.com/id/1388645967/photo/pensive-thoughtful-contemplating-caucasian-young-man-thinking-about-future-planning-new.jpg?s=612x612&w=0&k=20&c=Keax_Or9RivnYV_9VoOLjknWQP8iaxYXc4jS9rwBmcc="
   },
   {
+    "id": 8,
     "username": "Teemu Rantanen",
     "educationLevel": "Bachelor's Degree",
     "degreeProgram": "Bachelor of Information Technology",

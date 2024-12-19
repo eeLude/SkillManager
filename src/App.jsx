@@ -33,7 +33,7 @@ import consultants from "./consultants.json";
     const handleEdit = (editedConsultant) => {
       console.log('Updating consultant:', editedConsultant);
       const updatedConsultants = consultantData.map((consultant) =>
-        consultant.username === editedConsultant.username ? editedConsultant : consultant
+        consultant.id === editedConsultant.id ? editedConsultant : consultant
       );
       setConsultantData(updatedConsultants);
       localStorage.setItem('consultants', JSON.stringify(updatedConsultants)); // Save to localStorage
@@ -41,23 +41,27 @@ import consultants from "./consultants.json";
 
     return (
       <>
-        <div>
-          {loggedInUser ? (
-            <h1>Welcome, {loggedInUser.username}! {loggedInUser && <button onClick={handleLogout}>Logout</button>}
-            </h1>
-            
-            
-          ) : (
-            <Login onLogin={handleLogin} />
-          )}
-          
-        </div>
+        {loggedInUser && (
+          <div className="headerBar">
+            <div className="welcomeMessage">
+              Welcome, {loggedInUser.username}!
+            </div>
+            <div className="logoutButton">
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+          </div>
+        )}
   
-        <ConsultantList 
-        consult_data={consultantData}
-        loggedInUser={loggedInUser}
-        onEdit={handleEdit} 
-        />
+
+        {loggedInUser ? (
+          <ConsultantList
+            consult_data={consultantData}
+            loggedInUser={loggedInUser}
+            onEdit={handleEdit}
+          />
+        ) : (
+          <Login onLogin={handleLogin} />
+        )}
       </>
     );
   };

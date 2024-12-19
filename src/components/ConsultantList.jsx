@@ -1,6 +1,6 @@
 import ConsultantPerson from "./ConsultantPerson"
 import styles from "./ConsultantList.module.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EditConsultant from "./EditConsultant";
 import PrintConsultant from "./ConsultantPrint";
 import ConsultantTeam from "./ConsultantTeam";
@@ -44,8 +44,7 @@ const ConsultantList = ({consult_data, loggedInUser, onEdit}) => {
         
       };
 
-      
-
+    
       return (
         <div>
           {consult_data.map((consultant, index) => (
