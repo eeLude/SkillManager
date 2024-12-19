@@ -1,38 +1,70 @@
-.teamSection {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px; /* Give some space above the team section */
-  }
-  
-  /* A row for the Add and Clear buttons */
-  .buttonRow {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .teamContainer {
-    display: flex;
-    flex-wrap: wrap; /* If the team grows, cards wrap to next line */
-    gap: 20px; /* Space between cards */
-    justify-content: flex-start; /* Align cards to the left */
-  }
-  
-  /* Each team member displayed as a card */
-  .teamMemberCard {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    width: 200px; /* Fixed width card, adjust as desired */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  
-    transition: box-shadow 0.2s ease-in-out;
-  }
-  
-  /* Add a subtle hover effect for cards */
-  .teamMemberCard:hover {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
-  
+.teamContainer {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 400px;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+ 
+  display: flex;
+  flex-direction: column; 
+}
+
+.scrollArea {
+  overflow-y: auto;
+  flex: 1; 
+  padding: 20px;
+}
+
+.teamMemberCard .card {
+  width: 340px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.8rem;
+  margin: 0; 
+  line-height: 1.2;
+}
+
+.buttonContainerTeam {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1100;
+}
+
+.buttonContainerTeam button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 14px;
+}
+
+.buttonContainerTeam button:hover {
+  background: #444;
+}
