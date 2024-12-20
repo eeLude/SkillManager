@@ -1,88 +1,90 @@
-/* EditConsultant.module.css */
-/* EditConsultant.module.css */
 .formContainer {
-    position: fixed;
-    top: 50%;
-    right: 0; /* Position it on the right side of the screen */
-    transform: translateY(-50%); /* Vertically center the form */
-    width: 100%;
-    max-width: 400px; /* Adjust width as needed */
-    height: 80%; /* Adjust height to be a percentage of the viewport */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Makes the form scrollable */
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  body {
-    margin: 0;
-    padding-right: 0; /* Prevent horizontal scroll caused by fixed element */
-    overflow-x: hidden; /* Optional: Hide horizontal overflow */
-  }
-  
-  
- 
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formGroup {
-    margin-bottom: 15px;
-  }
-  
-  .formGroup label {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  
-  .formGroup input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .saveButton, .cancelButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .saveButton {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .cancelButton {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  .saveButton:hover {
-    background-color: #45a049;
-  }
-  
-  .cancelButton:hover {
-    background-color: #e53935;
-  }
-  
+  position: fixed;
+  top: 55%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 400px;
+  height: 80%;
+  background-color: #242424;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column; /* Allows stacking scrollArea and bottomArea */
+}
+
+.bottomArea {
+  /* Fixed-height bottom slice that does not scroll with .scrollArea */
+  flex-shrink: 0; /* Prevents it from shrinking */
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px; /* Add padding for spacing */
+  background: rgba(0,0,0,0.1); /* Match container style if desired */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional, subtle top shadow for separation */
+}
+
+
+.scrollArea {
+  flex: 1; /* Takes up remaining space above bottomArea */
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.formGroup input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.buttonContainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1100;
+}
+
+.saveButton, .cancelButton {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 14px;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.cancelButton:hover {
+  background-color: #e53935;
+}

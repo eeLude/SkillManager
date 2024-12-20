@@ -4,7 +4,6 @@ import Card from "./UI/card";
 import jsPDF from "jspdf";
 
 const ConsultantTeam = ({ team, handleTeam, consultant, clearTeam }) => {
-
   const handlePrintTeam = () => {
     if (team.length === 0) {
       alert("No team members to print.");
@@ -48,6 +47,7 @@ const ConsultantTeam = ({ team, handleTeam, consultant, clearTeam }) => {
   return (
     <div className={styles.teamSection}>
       <div className={styles.teamContainer}>
+        
         <div className={styles.scrollArea}>
           {team.map((person, index) => (
             <div key={index} className={styles.teamMemberCard}>
@@ -61,7 +61,7 @@ const ConsultantTeam = ({ team, handleTeam, consultant, clearTeam }) => {
           ))}
         </div>
         
-        <div className={styles.buttonContainerTeam}>
+        <div className={styles.bottomArea}>
           <button onClick={() => clearTeam(consultant)}>Clear</button>
           <button onClick={handlePrintTeam}>Print Team</button>
         </div>
