@@ -10,6 +10,7 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
   const [editingConsultant, setEditingConsultant] = useState(null);
   const [team, setTeam] = useState([]);
   const [currentConsultant, setCurrentConsultant] = useState([]);
+  const [addingTeam, setAddingTeam] = useState(false);
 
   const handleTeam = (consultant) => {
     if (
@@ -17,11 +18,13 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
       !team.find((o) => o.username === consultant.username)
     ) {
       setTeam([...team, consultant]);
+      setAddingTeam(true);
     }
   };
 
   const clearTeam = () => {
     setTeam([]);
+    setAddingTeam(false);
   };
 
   const handleEditClick = (consultant) => {
@@ -49,7 +52,7 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
         </Card>
       ))}
 
-      {loggedInUser && (
+      {loggedInUser && addingTeam && (
         <ConsultantTeam
           team={team}
           handleTeam={handleTeam}
