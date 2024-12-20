@@ -1,4 +1,6 @@
 /*Consultantlistcss*/
+
+
 .list {
   display: flex;
   flex-direction: column;
@@ -31,7 +33,6 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s ease;
-  font-size: 14px;
 }
 
 .buttonContainer button:hover {
@@ -39,23 +40,20 @@
 }
 
 .searchBar {
-  position: fixed; /* Fixes the search bar at the top */
+  position: absolute; /* Fixes the search bar at the top */
   top: 10px;
   align-items: center;
-  width: 20%; /* Stretches across the screen */
   padding: 1rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for separation */
 }
 
 .searchInput {
   width: 100%;
   max-width: 600px;
   padding: 0.75rem;
-  font-size: 1rem;
   background-color: #333333; /* Matches the 'kortti' color */
   color: #fff; /* Contrasts text for readability */
   border: 1px solid #242424; /* Matches 'card background' */
-  border-radius: 4px;
+  border-radius: 89px;
   outline: none;
   transition: border-color 0.2s ease;
 }

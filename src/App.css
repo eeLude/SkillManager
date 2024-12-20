@@ -29,8 +29,6 @@
     padding: 8px 16px; /* Slightly larger for better clickability */
     border-radius: 4px; /* Smooth corners */
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 500; /* Slight emphasis */
     transition: background 0.2s ease, transform 0.2s ease; /* Smooth hover effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   }
