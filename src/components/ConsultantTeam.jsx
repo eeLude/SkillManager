@@ -47,6 +47,7 @@ const ConsultantTeam = ({ team, handleTeam, consultant, clearTeam }) => {
   return (
     <div className={styles.teamSection}>
       <div className={styles.teamContainer}>
+        <h3 className={styles.title}>Team View</h3>
         
         <div className={styles.scrollArea}>
           {team.map((person, index) => (
@@ -62,8 +63,9 @@ const ConsultantTeam = ({ team, handleTeam, consultant, clearTeam }) => {
         </div>
         
         <div className={styles.bottomArea}>
-          <button onClick={() => clearTeam(consultant)}>Clear</button>
           <button onClick={handlePrintTeam}>Print Team</button>
+          <button onClick={() => clearTeam(consultant)}>Clear</button>
+          
         </div>
       </div>
     </div>

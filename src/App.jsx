@@ -4,55 +4,46 @@ import ConsultantList from './components/ConsultantList.jsx';
 import Login from './components/Login.jsx';
 import consultants from "./consultants.json";
 
+const App = () => {
+  const data = JSON.parse(localStorage.getItem('consultants')) || consultants;
+  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [consultantData, setConsultantData] = useState(data);
 
+  const handleLogin = (user) => {
+    setLoggedInUser(user);
+  };
 
+  const handleLogout = () => {
+    setLoggedInUser(null);
+  };
 
-  
+  const handleEdit = (editedConsultant) => {
+    const updatedConsultants = consultantData.map((consultant) =>
+      consultant.id === editedConsultant.id ? editedConsultant : consultant
+    );
+    setConsultantData(updatedConsultants);
+    localStorage.setItem('consultants', JSON.stringify(updatedConsultants));
+  };
 
-
-  const App = () => {
-
-   
-    const data = JSON.parse(localStorage.getItem('consultants')) || consultants;
-
-    const [loggedInUser, setLoggedInUser] = useState(null);
-    const [consultantData, setConsultantData] = useState(data);
-  
-    const handleLogin = (user) => {
-      setLoggedInUser(user);
-      
-    };
-
-    const handleLogout = () => {
-      setLoggedInUser(null);
-    };
-
-    
-    
-    
-    const handleEdit = (editedConsultant) => {
-      console.log('Updating consultant:', editedConsultant);
-      const updatedConsultants = consultantData.map((consultant) =>
-        consultant.id === editedConsultant.id ? editedConsultant : consultant
-      );
-      setConsultantData(updatedConsultants);
-      localStorage.setItem('consultants', JSON.stringify(updatedConsultants)); // Save to localStorage
-    };
-
-    return (
-      <>
-        {loggedInUser && (
-          <div className="headerBar">
-            <div className="welcomeMessage">
-              Welcome, {loggedInUser.username}!
-            </div>
-            <div className="logoutButton">
-              <button onClick={handleLogout}>Logout</button>
-            </div>
+  return (
+    <div className="container">
+      {/* Header */}
+      {loggedInUser && (
+        <div className="header">
+          {/* Welcome Message */}
+          <div className="welcomeMessage">
+            <h1>Welcome, {loggedInUser.username}!</h1>
           </div>
-        )}
-  
 
+          {/* Logout Button */}
+          <div className="logoutButton">
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        </div>
+      )}
+
+      {/* Content */}
+      <div className="content">
         {loggedInUser ? (
           <ConsultantList
             consult_data={consultantData}
@@ -62,8 +53,9 @@ import consultants from "./consultants.json";
         ) : (
           <Login onLogin={handleLogin} />
         )}
-      </>
-    );
-  };
-  
-  export default App;
+      </div>
+    </div>
+  );
+};
+
+export default App;

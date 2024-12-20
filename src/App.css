@@ -1,41 +1,50 @@
-.App {
+/* App.css */
+
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   flex-direction: column;
+  height: 100vh; /* Full viewport height */
 }
 
-#root {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem;
+.header {
+
+ 
+  height: 60px; /* Consistent header height */
 }
 
-.headerBar {
-  display: flex;
-  justify-content: space-between; /* Pushes items to opposite ends */
-  align-items: center; /* Vertically center them */
-  width: 100%;
-  padding: 1rem; /* Add some space around */
-}
-
-/* Optional styling */
 .welcomeMessage {
-  font-size: 1.2rem;
-  font-weight: bold;
+  position: absolute;
+  left: 40px; /* Position it on the left */
+  top: 20px;
+
 }
 
-.logoutButton button {
-  background: #f44336;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  .logoutButton button {
+    position: absolute;
+    right: 40px; /* Position it on the right */
+    top: 20px;
+    background: #333; /* Matches the dark palette */
+    color: #fff; /* High contrast for readability */
+    border: none;
+    padding: 8px 16px; /* Slightly larger for better clickability */
+    border-radius: 4px; /* Smooth corners */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500; /* Slight emphasis */
+    transition: background 0.2s ease, transform 0.2s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+
+.content {
+  flex: 1; /* Takes up remaining space */
+  margin-top: 60px; /* Matches the header height */
+  padding: 1rem;
 }
 
-.logoutButton button:hover {
-  background: #e53935;
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
