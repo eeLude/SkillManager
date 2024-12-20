@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styles from './Login.module.css';
+import React, { useState } from "react";
+import styles from "./Login.module.css";
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState("");
@@ -8,17 +8,25 @@ const Login = ({ onLogin }) => {
   const usernameHandler = (event) => setUsername(event.target.value);
   const passwordHandler = (event) => setPassword(event.target.value);
 
-  const processLogin = () => {
-    const users = JSON.parse(process.env.VITE_USERS_DATA);
+  const processLogin = async () => {
+    try {
+      // Send login request to the serverless function
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
 
-    const user = users.find(
-      (u) => u.username === username && u.password === password
-    );
+      if (!response.ok) {
+        throw new Error("Invalid username or password");
+      }
 
-    if (user) {
-      onLogin(user);
-    } else {
-      alert("Invalid username or password");
+      const user = await response.json();
+      onLogin(user); // Pass the logged-in user to the parent component
+    } catch (error) {
+      alert(error.message);
       setUsername("");
       setPassword("");
     }
@@ -41,7 +49,11 @@ const Login = ({ onLogin }) => {
           onChange={passwordHandler}
         />
         <button onClick={processLogin}>Login</button>
-        <h3>Demo credentials:<br/> Username: admin<br/> Password: admin123</h3>
+        <h3>
+          Demo credentials:
+          <br /> Username: admin
+          <br /> Password: admin123
+        </h3>
       </div>
     </div>
   );
