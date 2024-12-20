@@ -9,7 +9,7 @@ const Login = ({ onLogin }) => {
   const passwordHandler = (event) => setPassword(event.target.value);
 
   const processLogin = () => {
-    const users = JSON.parse(process.env.USERS_DATA);
+    const users = JSON.parse(process.env.VITE_USERS_DATA);
 
     const user = users.find(
       (u) => u.username === username && u.password === password
