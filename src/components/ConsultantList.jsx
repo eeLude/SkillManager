@@ -16,7 +16,10 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit, onAddToTeam }) => 
       loggedInUser?.username === consultant.username
     ) {
       setEditingConsultant(consultant);
+    } else {
+      alert("You do not have permission to edit this consultant's details.");
     }
+
   };
 
   const filteredConsultants = consult_data.filter((consultant) =>

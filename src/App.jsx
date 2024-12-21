@@ -30,6 +30,8 @@ const App = () => {
     ) {
       setTeam([...team, consultant]);
       setEditingTeam(true);
+    } else {
+      alert("You do not have permission to use this feature.");
     }
   };
 
