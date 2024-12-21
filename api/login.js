@@ -1,9 +1,8 @@
+const users = JSON.parse(process.env.USERS);
+
 export default function handler(req, res) {
     // Build the `users` array from separate environment variables
-    const users = [
-      { username: process.env.USER_ADMIN_USERNAME, password: process.env.USER_ADMIN_PASSWORD, role: "admin" },
-    ];
-  
+    
     const { username, password } = req.body;
   
     // Find the matching user
