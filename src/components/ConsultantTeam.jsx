@@ -3,7 +3,7 @@ import styles from "./ConsultantTeam.module.css";
 import Card from "./UI/card";
 import jsPDF from "jspdf";
 
-const ConsultantTeam = ({ team, handleTeam, consultant, clearTeam }) => {
+const ConsultantTeam = ({ team, consultant, clearTeam }) => {
   const handlePrintTeam = () => {
     if (team.length === 0) {
       alert("No team members to print.");
