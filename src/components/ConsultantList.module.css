@@ -1,4 +1,4 @@
-/*Consultantlistcss*/
+/*Consultantlist.module.css*/
 
 
 .list {
@@ -39,30 +39,3 @@
   background: #444;
 }
 
-.searchBar {
-  position: absolute; /* Fixes the search bar at the top */
-  top: 10px;
-  align-items: center;
-  padding: 1rem;
-}
-
-.searchInput {
-  width: 100%;
-  max-width: 600px;
-  padding: 0.75rem;
-  background-color: #333333; /* Matches the 'kortti' color */
-  color: #fff; /* Contrasts text for readability */
-  border: 1px solid #242424; /* Matches 'card background' */
-  border-radius: 89px;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.searchInput::placeholder {
-  color: #b3b3b3; /* Subtle placeholder color */
-}
-
-.searchInput:focus {
-  border-color: #494848; /* Highlight border on focus */
-  background-color: #242424; /* Slightly darker for focus effect */
-}

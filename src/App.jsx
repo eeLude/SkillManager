@@ -4,11 +4,14 @@ import ConsultantList from './components/ConsultantList.jsx';
 import Login from './components/Login.jsx';
 import consultants from "./consultants.json";
 
+
+
 const App = () => {
   const data = JSON.parse(localStorage.getItem('consultants')) || consultants;
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [consultantData, setConsultantData] = useState(data);
 
+  
   const handleLogin = (user) => {
     setLoggedInUser(user);
   };
@@ -16,6 +19,7 @@ const App = () => {
   const handleLogout = () => {
     setLoggedInUser(null);
   };
+
 
   const handleEdit = (editedConsultant) => {
     const updatedConsultants = consultantData.map((consultant) =>

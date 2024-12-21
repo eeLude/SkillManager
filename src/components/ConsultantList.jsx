@@ -5,6 +5,7 @@ import EditConsultant from "./EditConsultant";
 import ConsultantPrint from "./ConsultantPrint"; // Corrected the import
 import ConsultantTeam from "./ConsultantTeam";
 import Card from "./UI/card";
+import SearchBar from "./SearchBar";
 
 const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
   const [editingConsultant, setEditingConsultant] = useState(null);
@@ -45,15 +46,7 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
   return (
     <div className={styles.list}>
       {/* Search Bar */}
-      <div className={styles.searchBar}>
-        <input
-          type="text"
-          placeholder="Search consultants..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className={styles.searchInput}
-        />
-      </div>
+      <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
       {/* Consultant Cards */}
       {filteredConsultants.map((consultant, index) => (
