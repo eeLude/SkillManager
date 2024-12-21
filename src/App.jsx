@@ -3,14 +3,16 @@ import './App.css';
 import ConsultantList from './components/ConsultantList.jsx';
 import Login from './components/Login.jsx';
 import consultants from "./consultants.json";
-
+import ConsultantTeam from './components/ConsultantTeam.jsx';
 
 
 const App = () => {
   const data = JSON.parse(localStorage.getItem('consultants')) || consultants;
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [consultantData, setConsultantData] = useState(data);
-
+  const [team, setTeam] = useState([]);
+  const [editingTeam, setEditingTeam] = useState(false);
+  
   
   const handleLogin = (user) => {
     setLoggedInUser(user);
@@ -20,8 +22,19 @@ const App = () => {
     setLoggedInUser(null);
   };
 
+  const addToTeam = (consultant) => {
+    if (!team.find((member) => member.id === consultant.id)) {
+      setTeam([...team, consultant]);
+      setEditingTeam(true);
+    }
+  };
 
-  const handleEdit = (editedConsultant) => {
+  const clearTeam = () => {
+    setTeam([]);
+    setEditingTeam(false)
+  };
+
+  const handleEditConsultant = (editedConsultant) => {
     const updatedConsultants = consultantData.map((consultant) =>
       consultant.id === editedConsultant.id ? editedConsultant : consultant
     );
@@ -31,33 +44,34 @@ const App = () => {
 
   return (
     <div className="container">
-      {/* Header */}
-      {loggedInUser && (
-        <div className="header">
-          {/* Welcome Message */}
-          <div className="welcomeMessage">
-            <h1>Welcome, {loggedInUser.username}!</h1>
+      {loggedInUser ? (
+        <>
+          {/* Header */}
+          <header className="header">
+            <div className="welcomeMessage">
+              <h1>Welcome, {loggedInUser.username}!</h1>
+            </div>
+            <div className="logoutButton">
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+          </header>
+  
+          {/* Content */}
+          <div className="content">
+            <ConsultantList
+              consult_data={consultantData}
+              loggedInUser={loggedInUser}
+              onEdit={handleEditConsultant}
+              onAddToTeam={addToTeam}
+            />
+            {loggedInUser.role === "admin" && editingTeam &&(
+              <ConsultantTeam team={team} clearTeam={clearTeam} />
+            )}
           </div>
-
-          {/* Logout Button */}
-          <div className="logoutButton">
-            <button onClick={handleLogout}>Logout</button>
-          </div>
-        </div>
+        </>
+      ) : (
+        <Login onLogin={handleLogin} />
       )}
-
-      {/* Content */}
-      <div className="content">
-        {loggedInUser ? (
-          <ConsultantList
-            consult_data={consultantData}
-            loggedInUser={loggedInUser}
-            onEdit={handleEdit}
-          />
-        ) : (
-          <Login onLogin={handleLogin} />
-        )}
-      </div>
     </div>
   );
 };

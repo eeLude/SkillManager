@@ -7,27 +7,13 @@ import ConsultantTeam from "./ConsultantTeam";
 import Card from "./UI/card";
 import SearchBar from "./SearchBar";
 
-const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
+const ConsultantList = ({ consult_data, loggedInUser, onEdit, onAddToTeam }) => {
   const [editingConsultant, setEditingConsultant] = useState(null);
-  const [team, setTeam] = useState([]);
   const [currentConsultant, setCurrentConsultant] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [editingTeam, setEditingTeam] = useState(false);
 
-  const handleTeam = (consultant) => {
-    if (
-      loggedInUser?.role === "admin" &&
-      !team.find((o) => o.username === consultant.username)
-    ) {
-      setTeam([...team, consultant]);
-      setEditingTeam(true);
-    }
-  };
+ 
 
-  const clearTeam = () => {
-    setTeam([]);
-    setEditingTeam(false)
-  };
 
   const handleEditClick = (consultant) => {
     setCurrentConsultant(consultant);
@@ -57,23 +43,14 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit }) => {
               <button onClick={() => handleEditClick(consultant)}>Edit</button>
               <ConsultantPrint consultant={consultant} />
               {loggedInUser.role === "admin" && (
-                <button onClick={() => handleTeam(consultant)}>Add</button>
+                <button onClick={() => onAddToTeam(consultant)}>Add to Team</button>
               )}
             </div>
           )}
         </Card>
       ))}
 
-      {/* Consultant Team */}
-      {loggedInUser && editingTeam && (
-        <ConsultantTeam
-          team={team}
-          handleTeam={handleTeam}
-          clearTeam={clearTeam}
-          consultant={currentConsultant}
-        />
-      )}
-
+      
       {/* Edit Consultant */}
       {editingConsultant && (
         <EditConsultant
