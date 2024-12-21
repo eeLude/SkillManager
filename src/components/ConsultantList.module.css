@@ -17,25 +17,3 @@
   /* Card styling comes from Card.module.css as well, but you can add overrides here if needed */
 }
 
-.buttonContainer {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-.buttonContainer button {
-  background: #494848;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.buttonContainer button:hover {
-  background: #444;
-}
-

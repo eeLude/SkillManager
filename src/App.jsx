@@ -22,13 +22,18 @@ const App = () => {
     setLoggedInUser(null);
   };
 
+  //Function fires when Add button is pressed, checks if team has duplicate consultant, if not then adds to team
   const addToTeam = (consultant) => {
-    if (!team.find((member) => member.id === consultant.id)) {
+    if (
+      loggedInUser?.role === "admin" &&
+      !team.find((member) => member.id === consultant.id)
+    ) {
       setTeam([...team, consultant]);
       setEditingTeam(true);
     }
   };
 
+  //Clear team view and close window
   const clearTeam = () => {
     setTeam([]);
     setEditingTeam(false)
@@ -64,6 +69,7 @@ const App = () => {
               onEdit={handleEditConsultant}
               onAddToTeam={addToTeam}
             />
+            {/* If admin and add button clicked, render ConsultantTeam */}
             {loggedInUser.role === "admin" && editingTeam &&(
               <ConsultantTeam team={team} clearTeam={clearTeam} />
             )}

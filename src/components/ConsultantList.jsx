@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import ConsultantPerson from "./ConsultantPerson";
+import ConsultantActions from "./ConsultantActions";
 import styles from "./ConsultantList.module.css";
 import EditConsultant from "./EditConsultant";
-import ConsultantPrint from "./ConsultantPrint"; // Corrected the import
-import ConsultantTeam from "./ConsultantTeam";
 import Card from "./UI/card";
 import SearchBar from "./SearchBar";
 
 const ConsultantList = ({ consult_data, loggedInUser, onEdit, onAddToTeam }) => {
   const [editingConsultant, setEditingConsultant] = useState(null);
-  const [currentConsultant, setCurrentConsultant] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
- 
-
-
   const handleEditClick = (consultant) => {
-    setCurrentConsultant(consultant);
-    if (loggedInUser?.role === "admin" || loggedInUser?.username === consultant.username) {
+    if (
+      loggedInUser?.role === "admin" ||
+      loggedInUser?.username === consultant.username
+    ) {
       setEditingConsultant(consultant);
     }
   };
@@ -31,27 +28,22 @@ const ConsultantList = ({ consult_data, loggedInUser, onEdit, onAddToTeam }) => 
 
   return (
     <div className={styles.list}>
-      {/* Search Bar */}
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
-      {/* Consultant Cards */}
-      {filteredConsultants.map((consultant, index) => (
-        <Card className={styles.card} key={index}>
+      {filteredConsultants.map((consultant) => (
+        <Card className={styles.card} key={consultant.id}>
           <ConsultantPerson consult_data={consultant} />
           {loggedInUser && (
-            <div className={styles.buttonContainer}>
-              <button onClick={() => handleEditClick(consultant)}>Edit</button>
-              <ConsultantPrint consultant={consultant} />
-              {loggedInUser.role === "admin" && (
-                <button onClick={() => onAddToTeam(consultant)}>Add to Team</button>
-              )}
-            </div>
+            <ConsultantActions
+              consultant={consultant}
+              loggedInUser={loggedInUser}
+              onEditClick={handleEditClick}
+              onAddToTeam={onAddToTeam}
+            />
           )}
         </Card>
       ))}
 
-      
-      {/* Edit Consultant */}
       {editingConsultant && (
         <EditConsultant
           consultant={editingConsultant}
