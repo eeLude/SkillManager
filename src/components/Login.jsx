@@ -53,8 +53,14 @@ const Login = ({ onLogin }) => {
         <button onClick={processLogin}>Login</button>
         <h3>
           Demo credentials:
+          <br />
+          <br /> Admin:
           <br /> Username: admin
           <br /> Password: admin123
+          <br />
+          <br /> Consultant:
+          <br /> Username: Liisa Virtanen
+          <br /> Password: test
         </h3>
       </div>
     </div>
